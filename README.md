@@ -9,3 +9,8 @@ Installare [`nodemon`](https://nodemon.io) per far ripartire il processo del ser
  npm install -g nodemon
 ```
 Una volta installato esegui il tuo codice usando `nodemon <file.js>` invece di `node <file.js>`
+
+Installare `body-parser` per poter accedere ai dati inseriti dal client e manipolarli direttamente sul lato server:
+```
+ npm install body-parser
+```
