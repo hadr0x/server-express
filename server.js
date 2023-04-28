@@ -7,7 +7,14 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended : false}))
 
 app.get('/',(req,res)=>{
-    res.sendFile(__dirname + 'index.html')
+    res.sendFile(__dirname + "/index.html")
+})
+
+app.post('/',(req,res)=>{
+    var weight = req.body.weight
+    var height = req.body.height
+    var bmi = weight / Math.pow(height, 2)
+    res.send(`Your BMI is ${bmi}`)
 })
 
 app.get('/express',(req,res)=>{
